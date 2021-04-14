@@ -45,11 +45,8 @@ public class MainActivity extends AppCompatActivity {
         int intAleatorio = (int) (Math.random() * 10) + 1;
         texto = findViewById(R.id.textoFinal);
 
-        if(intentos < 1){
-            titulo.show();
-        }
 
-        String a = "aaaaaaa";
+
         View.OnClickListener elQueManeja = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
