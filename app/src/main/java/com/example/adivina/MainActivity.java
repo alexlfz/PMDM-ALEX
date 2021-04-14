@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             titulo.show();
         }
 
-        String a = "aaaaaaa"
+        String a = "aaaaaaa";
         View.OnClickListener elQueManeja = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
