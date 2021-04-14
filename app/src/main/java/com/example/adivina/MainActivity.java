@@ -10,8 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
 
-import java.util.Random;
-
 public class MainActivity extends AppCompatActivity {
 
     private TextView texto;
@@ -44,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
         int intAleatorio = (int) (Math.random() * 10) + 1;
         texto = findViewById(R.id.textoFinal);
-
-        String a;
 
         View.OnClickListener elQueManeja = new View.OnClickListener() {
             @Override
