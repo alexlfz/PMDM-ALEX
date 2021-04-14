@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">adivina</string>
+
+    <string-array name="lista_de_quesos">
+        <item>Cheddar</item>
+        <item>Gouda</item>
+        <item>American</item>
+    </string-array>
 </resources>
