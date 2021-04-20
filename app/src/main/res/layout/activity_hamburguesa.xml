@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#B8B7B7"
     tools:context=".Hamburguesa">
 
     <TextView
@@ -53,8 +55,22 @@
         app:layout_constraintTop_toBottomOf="@+id/Texto2" />
 
     <TextView
+        android:id="@+id/texto3"
+        android:layout_width="214dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="116dp"
+        android:text="Punto de la Carne:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Texto2" />
+
+    <TextView
         android:id="@+id/texto2"
-        android:layout_width="134dp"
+        android:layout_width="128dp"
         android:layout_height="31dp"
         android:layout_marginTop="88dp"
         android:text="Queso:"
@@ -63,6 +79,34 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Texto2" />
+
+    <TextView
+        android:id="@+id/texto4"
+        android:layout_width="128dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="148dp"
+        android:text="Ensalada:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Texto2" />
+
+    <TextView
+        android:id="@+id/texto5"
+        android:layout_width="128dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="188dp"
+        android:text="Patatas:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Texto2" />
 
@@ -88,6 +132,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="134dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="372dp"
+        android:text="MEDIANAS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="98dp"
         android:layout_height="38dp"
@@ -96,6 +151,16 @@
         app:layout_constraintHorizontal_bias="0.677"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/checkBox1" />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="99dp"
+        android:layout_height="33dp"
+        android:text="GRANDES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBox5" />
 
     <CheckBox
         android:id="@+id/checkBox3"
@@ -107,13 +172,75 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/checkBox1" />
 
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="128dp"
+        android:layout_height="33dp"
+        android:text="PEQUEÑAS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBox5" />
+
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="307dp"
+        android:layout_width="262dp"
         android:layout_height="31dp"
+        android:entries="@array/lista_de_quesos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/texto2" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="199dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#F8FF0000"
+        android:text="Realizar Pedido"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:iconTint="#00FF0000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3"
-        android:entries="@array/lista_de_quesos"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="178dp"
+        android:layout_height="31dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/texto3" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="94dp"
+        android:layout_height="39dp"
+        android:buttonTint="#000307FF"
+        android:text="ToggleButton"
+        android:textAlignment="center"
+        android:textColor="#FF0808"
+        android:textOff="No"
+        android:textOn="Si"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/texto4" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="410dp"
+        android:layout_height="243dp"
+        android:layout_marginTop="404dp"
+        android:src="@drawable/giphy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
