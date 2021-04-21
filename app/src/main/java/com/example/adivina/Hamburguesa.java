@@ -107,27 +107,27 @@ public class Hamburguesa extends AppCompatActivity {
                 }
 
 
-                mensaje += sQuesos.getSelectedItem().toString();
+                mensaje += "queso " + sQuesos.getSelectedItem().toString() + " ";
 
 
                 if(cPatatasPeq.isChecked()){
                     precioFinal += 1;
-                    mensaje += "patatas pequeñas, ";
+                    mensaje += "patatas pequeñas ";
                 }
                 if(cPatatasMed.isChecked()){
                     precioFinal += 1.5f;
-                    mensaje += "patatas medianas, ";
+                    mensaje += "patatas medianas ";
                 }
                 if(cPatatasGra.isChecked()){
                     precioFinal += 2.25f;
-                    mensaje += "patatas grandes, ";
+                    mensaje += "patatas grandes ";
                 }
 
                 if(tEnsalada.isChecked()){
                     precioFinal += 1.50f;
-                    mensaje += "y ensalada.";
+                    mensaje += "y con ensalada.";
                 }else{
-                    mensaje += "sin ensalada.";
+                    mensaje += "y sin ensalada.";
                 }
 
                 Toast.makeText(getApplicationContext(),mensaje + "\nPrecio final: " + precioFinal + "€",Toast.LENGTH_LONG).show();
