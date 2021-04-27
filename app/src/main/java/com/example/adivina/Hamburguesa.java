@@ -64,25 +64,27 @@ public class Hamburguesa extends AppCompatActivity {
         View.OnClickListener manejador = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                mensaje = "Hamburguesa";
                 precioFinal = 0;
 
                 if(tEnsalada.isChecked()){
                     precioFinal += 1.50f;
-                    mensaje += " con ensalada: ";
+                    i.putExtra("Ensalada","Si");
                 }else{
-                    mensaje += " sin ensalada: ";
+                    i.putExtra("Ensalada","No");
                 }
 
                 if(cTernera.isChecked()){
                     precioFinal += 8.5f;
-                    mensaje += "Carne de ternera ";
+                    i.putExtra("Carne","Ternera");
+                }else {
+                    if (cPollo.isChecked()) {
+                        precioFinal += 7.5f;
+                        i.putExtra("Carne", "Pollo");
+                    }else{
+                        i.putExtra("Carne","No");
+                    }
                 }
-                if(cPollo.isChecked()){
-                    precioFinal += 7.5f;
-                    mensaje += "Carne de pollo ";
-                }
+
                 if(cTofu.isChecked()){
                     titulo.show();
                     return;
@@ -90,47 +92,40 @@ public class Hamburguesa extends AppCompatActivity {
 
                 switch(puntoCarne.getProgress()) {
                     case 0:
-                        mensaje += "poco hecha, ";
+                        i.putExtra("EstadoCarne", "Poco hecha");
                         break;
                     case 1:
-                        mensaje += "al punto, ";
+                        i.putExtra("EstadoCarne", "Al punto");
                         break;
                     case 2:
-                        mensaje += "muy hecha, ";
+                        i.putExtra("EstadoCarne", "Muy hecha");
                         break;
                 }
 
-
-                mensaje += "queso " + sQuesos.getSelectedItem().toString() + ", ";
-
+                i.putExtra("Queso", sQuesos.getSelectedItem().toString());
 
                 if(cPatatasPeq.isChecked()){
                     precioFinal += 1;
-                    mensaje += "patatas pequeñas ";
+                    i.putExtra("Patatas", "Pequeñas");
+                }else {
+                    if (cPatatasMed.isChecked()) {
+                        precioFinal += 1.5f;
+                        i.putExtra("Patatas", "Medianas");
+                    }else{
+                        if(cPatatasGra.isChecked()){
+                            precioFinal += 2.25f;
+                            i.putExtra("Patatas", "Grandes");
+                        }else{
+                            i.putExtra("Patatas", "No");
+                        }
+                    }
                 }
-                if(cPatatasMed.isChecked()){
-                    precioFinal += 1.5f;
-                    mensaje += "patatas medianas ";
-                }
-                if(cPatatasGra.isChecked()){
-                    precioFinal += 2.25f;
-                    mensaje += "patatas grandes ";
-                }
+                i.putExtra("Precio", String.valueOf(precioFinal));
 
                 startActivity(i);
-
-
-                //Toast.makeText(getApplicationContext(),mensaje + "\nPrecio final: " + precioFinal + "€",Toast.LENGTH_LONG).show();
-
             }
         };
-
         botonRealizar=findViewById(R.id.button);
         botonRealizar.setOnClickListener(manejador);
-        
     }
-    
-  
-
-
 }
