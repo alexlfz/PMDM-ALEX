@@ -56,38 +56,30 @@ public class Hamburguesa extends AppCompatActivity {
         cPatatasGra =findViewById(R.id.checkBox6);
         tEnsalada =findViewById(R.id.toggleButton);
         sQuesos =findViewById(R.id.spinner2);
-
-
         puntoCarne = findViewById(R.id.seekBar3);
 
-        /*
-        sQuesos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                mensaje += "Queso " + parent.getItemAtPosition(position).toString() + ", ";
-                precioFinal += 2f;
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                mensaje += "Sin queso, ";
-            }
-        });*/
         
         View.OnClickListener manejador = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                mensaje = "Hamburguesa: ";
+                mensaje = "Hamburguesa";
                 precioFinal = 0;
+
+                if(tEnsalada.isChecked()){
+                    precioFinal += 1.50f;
+                    mensaje += " con ensalada: ";
+                }else{
+                    mensaje += " sin ensalada: ";
+                }
 
                 if(cTernera.isChecked()){
                     precioFinal += 8.5f;
-                    mensaje += "Ternera ";
+                    mensaje += "Carne de ternera ";
                 }
                 if(cPollo.isChecked()){
                     precioFinal += 7.5f;
-                    mensaje += "Pollo ";
+                    mensaje += "Carne de pollo ";
                 }
                 if(cTofu.isChecked()){
                     titulo.show();
@@ -99,15 +91,15 @@ public class Hamburguesa extends AppCompatActivity {
                         mensaje += "poco hecha, ";
                         break;
                     case 1:
-                        mensaje += "medio ";
+                        mensaje += "al punto, ";
                         break;
                     case 2:
-                        mensaje += "quemada ";
+                        mensaje += "muy hecha, ";
                         break;
                 }
 
 
-                mensaje += "queso " + sQuesos.getSelectedItem().toString() + " ";
+                mensaje += "queso " + sQuesos.getSelectedItem().toString() + ", ";
 
 
                 if(cPatatasPeq.isChecked()){
@@ -123,12 +115,6 @@ public class Hamburguesa extends AppCompatActivity {
                     mensaje += "patatas grandes ";
                 }
 
-                if(tEnsalada.isChecked()){
-                    precioFinal += 1.50f;
-                    mensaje += "y con ensalada.";
-                }else{
-                    mensaje += "y sin ensalada.";
-                }
 
                 Toast.makeText(getApplicationContext(),mensaje + "\nPrecio final: " + precioFinal + "€",Toast.LENGTH_LONG).show();
 
