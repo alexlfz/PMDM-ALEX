@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#E8EAF6"
+    tools:context=".Hamburguesa2">
+
+    <TextView
+        android:id="@+id/texto15"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/super_drift"
+        android:text="MUCHAS GRACIAS!"
+        android:textAlignment="center"
+        android:textColor="#283593"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto14" />
+
+    <TextView
+        android:id="@+id/texto6"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/super_drift"
+        android:text="PEDIDO REALIZADO!"
+        android:textAlignment="center"
+        android:textColor="#283593"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/texto7"
+        android:layout_width="186dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Carne:"
+        android:textColor="#283593"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/texto6"
+        app:layout_constraintTop_toBottomOf="@+id/texto6" />
+
+    <TextView
+        android:id="@+id/texto16"
+        android:layout_width="185dp"
+        android:layout_height="32dp"
+        android:textColor="#9FA8DA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/texto7"
+        app:layout_constraintTop_toTopOf="@+id/texto7" />
+
+    <TextView
+        android:id="@+id/texto17"
+        android:layout_width="185dp"
+        android:layout_height="32dp"
+        android:textColor="#9FA8DA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/texto8"
+        app:layout_constraintTop_toTopOf="@+id/texto8" />
+
+    <TextView
+        android:id="@+id/texto18"
+        android:layout_width="185dp"
+        android:layout_height="32dp"
+        android:textColor="#9FA8DA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/texto10"
+        app:layout_constraintTop_toTopOf="@+id/texto10" />
+
+    <TextView
+        android:id="@+id/texto19"
+        android:layout_width="185dp"
+        android:layout_height="32dp"
+        android:textColor="#9FA8DA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/texto11"
+        app:layout_constraintTop_toTopOf="@+id/texto11" />
+
+    <TextView
+        android:id="@+id/texto20"
+        android:layout_width="185dp"
+        android:layout_height="32dp"
+        android:textColor="#9FA8DA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/texto12"
+        app:layout_constraintTop_toTopOf="@+id/texto12" />
+
+    <TextView
+        android:id="@+id/texto8"
+        android:layout_width="186dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:text="Estado de la carne:"
+        android:textColor="#283593"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/texto7"
+        app:layout_constraintTop_toBottomOf="@+id/texto7" />
+
+    <TextView
+        android:id="@+id/texto10"
+        android:layout_width="186dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:text="Queso:"
+        android:textColor="#283593"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/texto8"
+        app:layout_constraintTop_toBottomOf="@+id/texto8" />
+
+    <TextView
+        android:id="@+id/texto11"
+        android:layout_width="186dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:text="Ensalada:"
+        android:textColor="#283593"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/texto10"
+        app:layout_constraintTop_toBottomOf="@+id/texto10" />
+
+    <TextView
+        android:id="@+id/texto12"
+        android:layout_width="186dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:text="Patatas:"
+        android:textColor="#283593"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/texto11"
+        app:layout_constraintTop_toBottomOf="@+id/texto11" />
+
+    <TextView
+        android:id="@+id/texto13"
+        android:layout_width="271dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:text="Su pedido ha sido realizado con exito con numero de seguimiento: #5AF245Q"
+        android:textAlignment="center"
+        android:textColor="#9FA8DA"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="@+id/texto12"
+        app:layout_constraintTop_toBottomOf="@+id/texto12" />
+
+    <TextView
+        android:id="@+id/texto14"
+        android:layout_width="272dp"
+        android:layout_height="81dp"
+        android:text="La entrega sera realizada lo antes posible(Aprox: 30min). Muchas gracias por su pedido, esperamos que lo disfrute!"
+        android:textAlignment="center"
+        android:textColor="#9FA8DA"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/texto13"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintStart_toStartOf="@+id/texto13"
+        app:layout_constraintTop_toBottomOf="@+id/texto13" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

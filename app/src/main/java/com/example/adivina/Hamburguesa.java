@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,6 +25,7 @@ public class Hamburguesa extends AppCompatActivity {
     String mensaje = "Hamburguesa: ";
     Spinner sQuesos;
     SeekBar puntoCarne;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +60,7 @@ public class Hamburguesa extends AppCompatActivity {
         sQuesos =findViewById(R.id.spinner2);
         puntoCarne = findViewById(R.id.seekBar3);
 
-        
+        Intent i = new Intent(this, Hamburguesa2.class);
         View.OnClickListener manejador = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,8 +117,10 @@ public class Hamburguesa extends AppCompatActivity {
                     mensaje += "patatas grandes ";
                 }
 
+                startActivity(i);
 
-                Toast.makeText(getApplicationContext(),mensaje + "\nPrecio final: " + precioFinal + "€",Toast.LENGTH_LONG).show();
+
+                //Toast.makeText(getApplicationContext(),mensaje + "\nPrecio final: " + precioFinal + "€",Toast.LENGTH_LONG).show();
 
             }
         };
