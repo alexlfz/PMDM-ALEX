@@ -7,7 +7,7 @@
     tools:context=".Calculadora3">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tNum1"
         android:layout_width="364dp"
         android:layout_height="71dp"
         android:layout_marginTop="120dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tNum2"
         android:layout_width="358dp"
         android:layout_height="70dp"
         android:layout_marginTop="24dp"
@@ -29,13 +29,13 @@
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/tNum1"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/tNum1"
+        app:layout_constraintTop_toBottomOf="@+id/tOperacion" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tResult"
         android:layout_width="358dp"
         android:layout_height="70dp"
         android:layout_marginTop="24dp"
@@ -43,13 +43,13 @@
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/tNum1"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/tNum1"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tOperacion"
         android:layout_width="129dp"
         android:layout_height="63dp"
         android:layout_marginTop="24dp"
@@ -58,10 +58,10 @@
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/tNum1"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/tNum1"
+        app:layout_constraintTop_toBottomOf="@+id/tNum1" />
 
     <TextView
         android:id="@+id/textView5"
@@ -73,8 +73,8 @@
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/tNum2"
         app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="@+id/tNum2"
+        app:layout_constraintTop_toBottomOf="@+id/tNum2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
