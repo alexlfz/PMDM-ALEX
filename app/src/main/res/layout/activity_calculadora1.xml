@@ -61,7 +61,7 @@
         android:id="@+id/TituloOperacion"
         android:layout_width="355dp"
         android:layout_height="38dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:text="OPERACIÓN"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -74,7 +74,7 @@
         android:id="@+id/bSumar"
         android:layout_width="143dp"
         android:layout_height="43dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="SUMAR"
         app:layout_constraintStart_toStartOf="@+id/TituloOperacion"
         app:layout_constraintTop_toBottomOf="@+id/TituloOperacion" />
@@ -92,7 +92,7 @@
         android:id="@+id/bMultiplicar"
         android:layout_width="143dp"
         android:layout_height="43dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="MULTIPLICAR"
         app:layout_constraintStart_toStartOf="@+id/bSumar"
         app:layout_constraintTop_toBottomOf="@+id/bSumar" />
@@ -108,11 +108,12 @@
 
     <Button
         android:id="@+id/bCalcular"
-        android:layout_width="241dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="365dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="20dp"
         android:text="CALCULAR"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bMultiplicar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
