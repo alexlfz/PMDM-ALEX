@@ -25,6 +25,9 @@ public class Calculadora1 extends AppCompatActivity {
         Intent i = new Intent(this, Calculadora2.class);
         Intent i2 = new Intent(this, Calculadora3.class);
 
+        tNumero1 = findViewById(R.id.tNum1);
+        tNumero2 = findViewById(R.id.tNumero2);
+
         View.OnClickListener elQueManeja = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,8 +68,7 @@ public class Calculadora1 extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        tNumero1 = findViewById(R.id.tNum1);
-        tNumero2 = findViewById(R.id.tNumero2);
+
 
         if (requestCode == LAUNCH_GETNUMBER_TOP) {
             if(resultCode == Activity.RESULT_OK){
