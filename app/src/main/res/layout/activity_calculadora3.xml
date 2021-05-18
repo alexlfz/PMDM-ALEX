@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CFD8DC"
     tools:context=".Calculadora3">
 
     <TextView
@@ -11,6 +12,7 @@
         android:layout_width="364dp"
         android:layout_height="71dp"
         android:layout_marginTop="120dp"
+        android:background="#B0BEC5"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -25,6 +27,7 @@
         android:layout_width="358dp"
         android:layout_height="70dp"
         android:layout_marginTop="24dp"
+        android:background="#B0BEC5"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -39,6 +42,7 @@
         android:layout_width="358dp"
         android:layout_height="70dp"
         android:layout_marginTop="24dp"
+        android:background="#B0BEC5"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -53,6 +57,7 @@
         android:layout_width="129dp"
         android:layout_height="63dp"
         android:layout_marginTop="24dp"
+        android:background="#B0BEC5"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#000000"
@@ -68,6 +73,7 @@
         android:layout_width="129dp"
         android:layout_height="63dp"
         android:layout_marginTop="24dp"
+        android:background="#B0BEC5"
         android:text="="
         android:textAlignment="center"
         android:textColor="#000000"
