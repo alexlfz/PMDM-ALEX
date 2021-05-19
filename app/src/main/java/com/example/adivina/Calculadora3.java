@@ -13,8 +13,8 @@ import org.w3c.dom.Text;
 public class Calculadora3 extends AppCompatActivity {
 
     private TextView tNumero1, tNumero2;
-    private TextView tOperacion;
-
+    private TextView tOperacion, tResult;
+    private int resultado;
 
 
     @Override
@@ -34,8 +34,33 @@ public class Calculadora3 extends AppCompatActivity {
 
         tOperacion = findViewById(R.id.tOperacion);
         tOperacion.setText(datos.getString("operacion"));
+
+
+        switch (datos.getString("operacion")){
+            case "+":
+                resultado = Integer.parseInt(datos.getString("numero1"))
+                            +
+                            Integer.parseInt(datos.getString("numero2"));
+                break;
+            case "-":
+                resultado = Integer.parseInt(datos.getString("numero1"))
+                        -
+                        Integer.parseInt(datos.getString("numero2"));
+                break;
+            case "*":
+                resultado = Integer.parseInt(datos.getString("numero1"))
+                        *
+                        Integer.parseInt(datos.getString("numero2"));
+                break;
+            case "/":
+                resultado = Integer.parseInt(datos.getString("numero1"))
+                        /
+                        Integer.parseInt(datos.getString("numero2"));
+                break;
+        }
+
+        tResult = findViewById(R.id.tResult);
+        tResult.setText(resultado);
+
     }
-
-
-
 }
