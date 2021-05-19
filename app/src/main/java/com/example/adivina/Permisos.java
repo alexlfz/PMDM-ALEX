@@ -56,20 +56,7 @@ public class Permisos extends AppCompatActivity {
         View.OnClickListener elQueManeja2 = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M){
-                    if (ContextCompat.checkSelfPermission(this,
-                            Manifest.permission.CALL_PHONE)
-                            != PackageManager.PERMISSION_GRANTED) {
-                        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                                Manifest.permission.CALL_PHONE)) {
-
-                        } else {
-                            ActivityCompat.requestPermissions(this,
-                                    new String[]{Manifest.permission.CALL_PHONE},
-                                    MY_PERMISSIONS_REQUEST_CALL_PHONE);
-                        }
-                    }
-                }
+                callPhone();
             }
         };
 
