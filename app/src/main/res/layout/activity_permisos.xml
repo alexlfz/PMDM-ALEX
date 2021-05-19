@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Permisos">
+
+    <Button
+        android:id="@+id/bWeb"
+        android:layout_width="350dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="48dp"
+        android:text="NOSOTROS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bLlamar"
+        android:layout_width="350dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="80dp"
+        android:text="LLAMAR"
+        app:layout_constraintEnd_toEndOf="@+id/bWeb"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bWeb"
+        app:layout_constraintTop_toBottomOf="@+id/bWeb" />
+
+    <Button
+        android:id="@+id/bMensaje"
+        android:layout_width="350dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="80dp"
+        android:text="FELICITAR"
+        app:layout_constraintEnd_toEndOf="@+id/bLlamar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bLlamar"
+        app:layout_constraintTop_toBottomOf="@+id/bLlamar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
