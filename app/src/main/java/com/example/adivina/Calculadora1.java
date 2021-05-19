@@ -50,28 +50,31 @@ public class Calculadora1 extends AppCompatActivity {
         rMultiplicar = findViewById(R.id.bMultiplicar);
         rDividir = findViewById(R.id.bDividir);
 
-        if(rSumar.isChecked()){
-            opcion = "+";
-        }else{
-            if(rRestar.isChecked()){
-                opcion = "-";
-            }
-            else{
-                if(rMultiplicar.isChecked()){
-                    opcion = "*";
-                }else{
-                    if(rDividir.isChecked()){
-                        opcion = "/";
-                    }
-                }
-            }
-        }
+
 
         View.OnClickListener elQueManeja3 = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i2.putExtra("numero1",tNumero1.toString());
-                i2.putExtra("numero2",tNumero2.toString());
+
+                if(rSumar.isChecked()){
+                    opcion = "+";
+                }else{
+                    if(rRestar.isChecked()){
+                        opcion = "-";
+                    }
+                    else{
+                        if(rMultiplicar.isChecked()){
+                            opcion = "*";
+                        }else{
+                            if(rDividir.isChecked()){
+                                opcion = "/";
+                            }
+                        }
+                    }
+                }
+
+                i2.putExtra("numero1",tNumero1.getText());
+                i2.putExtra("numero2",tNumero2.getText());
                 i2.putExtra("operacion", opcion);
                 startActivity(i2);
             }

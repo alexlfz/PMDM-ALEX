@@ -14,7 +14,8 @@ public class Calculadora3 extends AppCompatActivity {
 
     private TextView tNumero1, tNumero2;
     private TextView tOperacion, tResult;
-    private int resultado;
+    private int num1, num2;
+    private float resultado;
 
 
     @Override
@@ -27,39 +28,32 @@ public class Calculadora3 extends AppCompatActivity {
         tNumero1 = findViewById(R.id.tNum1);
         tNumero1.setText(datos.getString("numero1"));
 
-        Toast.makeText(getApplicationContext(),datos.getString("numero1"),Toast.LENGTH_LONG).show();
-
         tNumero2 = findViewById(R.id.tNum2);
         tNumero2.setText(datos.getString("numero2"));
 
         tOperacion = findViewById(R.id.tOperacion);
         tOperacion.setText(datos.getString("operacion"));
 
+        num1 = Integer.parseInt(datos.getString("numero1"));
+        num2 = Integer.parseInt(datos.getString("numero2"));
+
         switch (datos.getString("operacion")){
             case "+":
-                resultado = Integer.parseInt(datos.getString("numero1"))
-                            +
-                            Integer.parseInt(datos.getString("numero2"));
+                resultado = num1 + num2;
                 break;
             case "-":
-                resultado = Integer.parseInt(datos.getString("numero1"))
-                        -
-                        Integer.parseInt(datos.getString("numero2"));
+                resultado = num1 - num2;
                 break;
             case "*":
-                resultado = Integer.parseInt(datos.getString("numero1"))
-                        *
-                        Integer.parseInt(datos.getString("numero2"));
+                resultado = num1 * num2;
                 break;
             case "/":
-                resultado = Integer.parseInt(datos.getString("numero1"))
-                        /
-                        Integer.parseInt(datos.getString("numero2"));
+                resultado = num1 / num2;
                 break;
         }
-        /*
+
         tResult = findViewById(R.id.tResult);
-        tResult.setText(resultado);*/
+        tResult.setText("" + resultado);
 
     }
 }
