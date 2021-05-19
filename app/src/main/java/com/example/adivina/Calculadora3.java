@@ -35,7 +35,6 @@ public class Calculadora3 extends AppCompatActivity {
         tOperacion = findViewById(R.id.tOperacion);
         tOperacion.setText(datos.getString("operacion"));
 
-
         switch (datos.getString("operacion")){
             case "+":
                 resultado = Integer.parseInt(datos.getString("numero1"))
@@ -58,9 +57,9 @@ public class Calculadora3 extends AppCompatActivity {
                         Integer.parseInt(datos.getString("numero2"));
                 break;
         }
-
+        /*
         tResult = findViewById(R.id.tResult);
-        tResult.setText(resultado);
+        tResult.setText(resultado);*/
 
     }
 }
