@@ -19,7 +19,6 @@ import android.widget.Toast;
 public class Permisos extends AppCompatActivity {
 
     private Button bWeb, bLlamar, bMensaje;
-    final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
