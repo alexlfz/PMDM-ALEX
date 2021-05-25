@@ -26,9 +26,6 @@ public class Permisos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_permisos);
 
-        bLlamar = findViewById(R.id.bLlamar);
-        bMensaje = findViewById(R.id.bMensaje);
-
         Intent i = new Intent(this, Permisos2.class);
 
         View.OnClickListener elQueManeja = new View.OnClickListener() {
@@ -38,12 +35,10 @@ public class Permisos extends AppCompatActivity {
             }
         };
 
-
         View.OnClickListener elQueManeja2 = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int permiso = ContextCompat.checkSelfPermission(Permisos.this, Manifest.permission.CALL_PHONE);
-                if(permiso != PackageManager.PERMISSION_GRANTED){
+                if(ContextCompat.checkSelfPermission(Permisos.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
                     Toast.makeText(getApplicationContext(), "No tiene permisos de llamada", Toast.LENGTH_LONG).show();
                     ActivityCompat.requestPermissions(Permisos.this, new String[]{Manifest.permission.CALL_PHONE},255);
                 }else{
@@ -54,11 +49,30 @@ public class Permisos extends AppCompatActivity {
             }
         };
 
+        View.OnClickListener elQueManeja3 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(ContextCompat.checkSelfPermission(Permisos.this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED){
+                    Toast.makeText(getApplicationContext(), "No tiene permisos de SMS", Toast.LENGTH_LONG).show();
+                    ActivityCompat.requestPermissions(Permisos.this, new String[]{Manifest.permission.SEND_SMS},1000);
+                }else{
+                    Intent i3 = new Intent(Intent.ACTION_SENDTO);
+                    i3.setData(Uri.parse("smsto:691641671"));
+                    i3.putExtra("sms_body", "Felicidades!!!");
+                    startActivity(i3);
+                }
+            }
+        };
+
         bWeb = findViewById(R.id.bWeb);
         bWeb.setOnClickListener(elQueManeja);
 
         bLlamar = findViewById(R.id.bLlamar);
         bLlamar.setOnClickListener(elQueManeja2);
+
+        bMensaje = findViewById(R.id.bMensaje);
+        bMensaje.setOnClickListener(elQueManeja3);
 
     }
 
