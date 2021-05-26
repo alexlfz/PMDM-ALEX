@@ -19,6 +19,8 @@ import android.widget.Toast;
 public class Permisos extends AppCompatActivity {
 
     private Button bWeb, bLlamar, bMensaje;
+    private final int PERMISO_LLAMADA = 255;
+    private final int PERMISO_SMS = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +40,9 @@ public class Permisos extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(ContextCompat.checkSelfPermission(Permisos.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
-                    Toast.makeText(getApplicationContext(), "No tiene permisos de llamada", Toast.LENGTH_LONG).show();
-                    ActivityCompat.requestPermissions(Permisos.this, new String[]{Manifest.permission.CALL_PHONE},255);
+                    ActivityCompat.requestPermissions(Permisos.this, new String[]{Manifest.permission.CALL_PHONE},PERMISO_LLAMADA);
                 }else{
-                    Intent i2 = new Intent(Intent.ACTION_CALL);
-                    i2.setData(Uri.parse("tel:691641671"));
-                    startActivity(i2);
+                    llamar();
                 }
             }
         };
@@ -53,13 +52,9 @@ public class Permisos extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(ContextCompat.checkSelfPermission(Permisos.this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED){
-                    Toast.makeText(getApplicationContext(), "No tiene permisos de SMS", Toast.LENGTH_LONG).show();
-                    ActivityCompat.requestPermissions(Permisos.this, new String[]{Manifest.permission.SEND_SMS},1000);
+                    ActivityCompat.requestPermissions(Permisos.this, new String[]{Manifest.permission.SEND_SMS},PERMISO_SMS);
                 }else{
-                    Intent i3 = new Intent(Intent.ACTION_SENDTO);
-                    i3.setData(Uri.parse("smsto:691641671"));
-                    i3.putExtra("sms_body", "Felicidades!!!");
-                    startActivity(i3);
+                    enviarMensaje();
                 }
             }
         };
@@ -73,6 +68,42 @@ public class Permisos extends AppCompatActivity {
         bMensaje = findViewById(R.id.bMensaje);
         bMensaje.setOnClickListener(elQueManeja3);
 
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISO_LLAMADA: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    llamar();
+                } else {
+                    Toast.makeText(getApplicationContext(), "No tiene permisos de llamada", Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+
+            case PERMISO_SMS: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    enviarMensaje();
+                } else {
+                    Toast.makeText(getApplicationContext(), "No tiene permisos de SMS", Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+        }
+    }
+
+    public void llamar(){
+        Intent i2 = new Intent(Intent.ACTION_CALL);
+        i2.setData(Uri.parse("tel:666666666"));
+        startActivity(i2);
+    }
+
+    public void enviarMensaje(){
+        Intent i3 = new Intent(Intent.ACTION_SENDTO);
+        i3.setData(Uri.parse("smsto:66666666"));
+        i3.putExtra("sms_body", "Felicidades!!!");
+        startActivity(i3);
     }
 
 
