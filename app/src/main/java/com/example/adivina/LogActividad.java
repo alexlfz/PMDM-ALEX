@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.renderscript.Sampler;
@@ -18,27 +17,25 @@ import android.widget.Toast;
 public class LogActividad extends AppCompatActivity {
 
     private EditText txtMensaje;
-    private Button bEnviar;
+    private final FragmentManager fragmentManager = getSupportFragmentManager();
+    private final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+    private final LogMensaje fragmento = new LogMensaje();
+    private final Bundle bundle = new Bundle();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_actividad);
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        LogMensaje fragmento = new LogMensaje();
+        fragmentTransaction.add(R.id.fragmentMensajes, fragmento).commit();
 
         txtMensaje = findViewById(R.id.txtMensaje);
 
-        bEnviar = findViewById(R.id.btnEnviar);
+        Button bEnviar = findViewById(R.id.btnEnviar);
         bEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putString("txt", txtMensaje.getText().toString());
-                fragmento.setArguments(bundle);
-                fragmentTransaction.add(R.id.fragmentMensajes, fragmento, null).commit();
+                fragmento.updateText(txtMensaje.getText().toString());
             }
         });
     }

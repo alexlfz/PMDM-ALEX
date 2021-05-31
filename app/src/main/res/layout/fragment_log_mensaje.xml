@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
     tools:context=".LogMensaje" >
 
     <!-- TODO: Update blank fragment layout -->
@@ -12,6 +11,13 @@
         android:id="@+id/txtParrafo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hola mundo" />
+        android:paddingStart="10sp"
+        android:text="Hola mundo"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:background="@color/purple_200"
+        android:textStyle="bold" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

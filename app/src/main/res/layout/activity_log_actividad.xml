@@ -32,7 +32,7 @@
         android:name="com.example.adivina.LogMensaje"
         android:layout_width="378dp"
         android:layout_height="422dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="@+id/btnEnviar"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnEnviar"
