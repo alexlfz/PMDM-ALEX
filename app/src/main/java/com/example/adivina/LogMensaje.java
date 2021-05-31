@@ -37,12 +37,13 @@ public class LogMensaje extends Fragment {
 
 
     public void updateText(String text){
-        parrafo.setText(parrafo.getText() + "\n " + text);
+        if(!text.equals("")){
+            parrafo.setText(parrafo.getText() + "\n " + text);
+        }
 
         Random rnd = new Random();
         int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
         parrafo.setBackgroundColor(color);
+
     }
-
-
 }

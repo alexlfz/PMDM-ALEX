@@ -14,7 +14,7 @@
         android:background="@color/purple_200"
         android:paddingStart="10sp"
         android:paddingEnd="10sp"
-        android:text="LISTA DE TAREAS:"
+        android:text="@string/texto_de_fragmento"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"

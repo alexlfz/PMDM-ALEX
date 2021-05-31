@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">adivina</string>
+    <string name="app_name">FRAGMENTOS</string>
 
     <string-array name="lista_de_quesos">
         <item>Cheddar</item>
@@ -8,4 +8,8 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="texto_de_fragmento">LISTA DE TAREAS</string>
+
 </resources>
