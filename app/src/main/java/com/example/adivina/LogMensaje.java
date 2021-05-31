@@ -17,7 +17,6 @@ import java.util.Random;
 public class LogMensaje extends Fragment {
 
     TextView parrafo;
-    String lineaTexto = "";
 
     public LogMensaje() {}
 

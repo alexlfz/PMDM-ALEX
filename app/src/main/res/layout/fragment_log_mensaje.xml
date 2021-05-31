@@ -11,13 +11,14 @@
         android:id="@+id/txtParrafo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/purple_200"
         android:paddingStart="10sp"
-        android:text="Hola mundo"
+        android:paddingEnd="10sp"
+        android:text="LISTA DE TAREAS:"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
-        android:background="@color/purple_200"
         android:textStyle="bold" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
