@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GolActividad">
+
+    <TextView
+        android:id="@+id/txtCelebracion"
+        android:layout_width="377dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentGol"
+        android:name="com.example.adivina.GolFragmento"
+        android:layout_width="373dp"
+        android:layout_height="347dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtCelebracion"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtCelebracion"
+        app:layout_constraintTop_toBottomOf="@+id/txtCelebracion" />
+</androidx.constraintlayout.widget.ConstraintLayout>

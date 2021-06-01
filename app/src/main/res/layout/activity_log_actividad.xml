@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="@+id/txtMensaje"
         app:layout_constraintTop_toBottomOf="@+id/txtMensaje" />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentMensajes"
         android:name="com.example.adivina.LogMensaje"
         android:layout_width="378dp"

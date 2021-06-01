@@ -20,7 +20,6 @@ public class LogActividad extends AppCompatActivity {
     private final FragmentManager fragmentManager = getSupportFragmentManager();
     private final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
     private final LogMensaje fragmento = new LogMensaje();
-    private final Bundle bundle = new Bundle();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

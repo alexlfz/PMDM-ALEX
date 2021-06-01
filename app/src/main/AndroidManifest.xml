@@ -13,11 +13,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Adivina">
-        <activity android:name=".LogActividad">
+        <activity android:name=".GolActividad">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".LogActividad">
+
         </activity>
         <activity android:name=".Permisos2" />
         <activity android:name=".Permisos" />
