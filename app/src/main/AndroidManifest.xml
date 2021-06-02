@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Adivina">
-
+        <activity android:name=".ListadoAdapterr"></activity>
         <activity android:name=".U12000_ListaDeElementos">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".ListadoActividad" />
         <activity android:name=".GolActividad" />
         <activity android:name=".LogActividad" />
