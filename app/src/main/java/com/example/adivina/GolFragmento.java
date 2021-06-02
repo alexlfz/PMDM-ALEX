@@ -62,7 +62,6 @@ public class GolFragmento extends Fragment {
                 listener.onInputASent(input);
             }
         });
-
         return v;
     }
 
