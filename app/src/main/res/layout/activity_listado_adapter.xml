@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ListadoAdapter">
 
     <TextView
@@ -12,11 +12,13 @@
         android:layout_height="100dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#000000"
-        android:textSize="60sp"
+        android:textSize="45sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,8 +31,9 @@
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#000000"
-        android:textSize="60sp"
+        android:textSize="45sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/idEquipoLocal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/idScoreVisitante"
         app:layout_constraintTop_toTopOf="@+id/idEquipoLocal" />
@@ -42,7 +45,7 @@
         android:layout_marginStart="8dp"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="34sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/idEquipoLocal"
         app:layout_constraintStart_toEndOf="@+id/idEquipoLocal"
@@ -56,7 +59,7 @@
         android:layout_marginStart="10dp"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="34sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/idScoreLocal"
         app:layout_constraintStart_toEndOf="@+id/textView3"
@@ -67,7 +70,7 @@
         android:id="@+id/textView3"
         android:layout_width="23dp"
         android:layout_height="23dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="8dp"
         android:text="-"
         android:textAlignment="center"
         android:textIsSelectable="false"
@@ -76,6 +79,7 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/idScoreLocal"
         app:layout_constraintStart_toEndOf="@+id/idScoreLocal"
-        app:layout_constraintTop_toTopOf="@+id/idScoreLocal" />
+        app:layout_constraintTop_toTopOf="@+id/idScoreLocal"
+        app:layout_constraintVertical_bias="0.212" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
