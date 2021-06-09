@@ -13,8 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Adivina">
-        <activity android:name=".U12000_ListaDeElementos"/>
-        <activity android:name=".ListadoActividad" >
+        <activity android:name=".ListadoActividad2"></activity>
+        <activity android:name=".U12000_ListaDeElementos" />
+        <activity android:name=".ListadoActividad">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
