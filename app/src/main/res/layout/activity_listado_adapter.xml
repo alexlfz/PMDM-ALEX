@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scaleY="20"
-    tools:context=".ListadoAdapterr" >
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_border"
+    tools:context=".ListadoAdapter">
 
     <TextView
         android:id="@+id/idEquipoLocal"
@@ -13,29 +13,32 @@
         android:layout_height="100dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="x"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/bulpen"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#000000"
-        android:textSize="60sp"
+        android:textSize="40sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/idEquipoLocal3"
+        android:id="@+id/idEquipoVisitante"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Y"
+        android:fontFamily="@font/bulpen"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#000000"
-        android:textSize="60sp"
+        android:textSize="40sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/idEquipoLocal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.959"
-        app:layout_constraintStart_toEndOf="@+id/idEquipoLocal"
+        app:layout_constraintStart_toEndOf="@+id/idScoreVisitante"
         app:layout_constraintTop_toTopOf="@+id/idEquipoLocal" />
 
     <TextView
@@ -43,14 +46,46 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
-        android:text="X"
+        android:fontFamily="@font/bulpen"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="34sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/idEquipoLocal"
         app:layout_constraintStart_toEndOf="@+id/idEquipoLocal"
         app:layout_constraintTop_toTopOf="@+id/idEquipoLocal"
         app:layout_constraintVertical_bias="0.522" />
+
+    <TextView
+        android:id="@+id/idScoreVisitante"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/bulpen"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/idScoreLocal"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/idScoreLocal"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/bulpen"
+        android:text="-"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/idScoreLocal"
+        app:layout_constraintStart_toEndOf="@+id/idScoreLocal"
+        app:layout_constraintTop_toTopOf="@+id/idScoreLocal"
+        app:layout_constraintVertical_bias="0.212" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
