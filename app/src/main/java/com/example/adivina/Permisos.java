@@ -101,7 +101,7 @@ public class Permisos extends AppCompatActivity {
 
     public void enviarMensaje(){
         Intent i3 = new Intent(Intent.ACTION_SENDTO);
-        i3.setData(Uri.parse("smsto:66666666"));
+        i3.setData(Uri.parse("smsto:666666666"));
         i3.putExtra("sms_body", "Felicidades!!!");
         startActivity(i3);
     }
